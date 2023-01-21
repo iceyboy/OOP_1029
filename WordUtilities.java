@@ -1,7 +1,7 @@
 
 public class WordUtilities {
-
-	public static boolean isDigit(char ch) {
+	
+public static boolean isDigit(char ch) {
 		
 		if (ch >= '0' && ch <= '9') {
 
