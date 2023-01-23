@@ -1,4 +1,4 @@
-package week2;
+package demo6;
 
 public class Car {
 	private String make;
@@ -14,8 +14,8 @@ public class Car {
 	}
 
 	public void setColour(String newCol) {
-		if (newCol != null) {
-			this.colour = newCol;
+		if (newCol.equals("Blue") || newCol.equals("Red")) {
+			colour = newCol;
 		}
 	}
 
