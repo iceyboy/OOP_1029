@@ -1,56 +1,91 @@
-package week2;
+package week31029;
 
 public class Student {
-	private int studentId;
+	
+	
+	
+	//instance data - to describe state
+	
+	private int studentID;
 	private String name;
 	private String course;
 	private char faculty;
-	private static int nextId = 1234;
 	
-	public Student(String sname, String scourse, char fac) {
-		this.studentId = nextId;
-		nextId++;
-		this.name = sname;
-		this.course = scourse;
+	
+	
+	//constructor
+	
+	public Student(int id, String nm, String crs, char fac) {
+		
+		this.studentID = id;
+		this.name = nm;
+		this.course = crs;
 		this.faculty = fac;
+		
 	}
 	
-	// Getters
+	//getters - to access instance data
+	
 	public int getStudentId() {
-		return studentId;
+		
+		return this.studentID;
+	
 	}
 	
 	public String getName() {
-		return name;
+		
+		return this.name;
+		
 	}
 	
 	public String getCourse() {
-		return course;
+		
+		return this.course;
+		
 	}
 	
 	public char getFaculty() {
-		return faculty;
+		
+		return this.faculty;
+		
 	}
 	
-	// Setters
-	public void setName(String aName) {
-		name = aName;
+	//setters - to modify instance data
+	
+	//don't use static to describe instance methods 
+	
+	public void setFaculty(char fac) {
+		
+		//must maintain integrity of state of objects
+		
+		if(fac == 'S' || fac == 'A') {
+		
+			this.faculty = fac;
+			
+		}
+		
 	}
 	
-	public void setCourse(String aCourse) {
-		course = aCourse;
-	}
-	
-	public void setFaculty(char aFaculty) {
-		faculty = aFaculty;
-	}
-	
-	// toString
 	public String toString() {
-		String data = "Number: " + getStudentId() + "\n";
-		data += "Name: " + getName() + "\n";
-		data += "Course: " + getCourse() + "\n";
-		data += "Faculty: " + getFaculty() + "\n";
-		return data;
+		
+		String str = "";
+		
+		str += "ID: " + getStudentId() + "\n";
+		str += "Name: " + getName() + "\n";
+		str += "Course: " + getCourse() + "\n";
+		str += "Faculty: " + getFaculty() + "\n";
+		
+		return str;
+		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 }
