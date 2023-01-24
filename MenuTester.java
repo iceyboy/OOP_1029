@@ -1,13 +1,16 @@
-package week2;
+package week31029;
 
 public class MenuTester {
 
 	public static void main(String[] args) {
 		String title = "Student Registration";
-		String options[] = {"Add New Student", "List All Students", "Quit"};
+		String options[] = { "Add New Student", "List All Students", "Quit" };
+
 		Menu regMenu = new Menu(title, options);
 		int choice = regMenu.getUserChoice();
+
 		System.out.println("User picked option: " + choice);
+
 	}
 
 }
