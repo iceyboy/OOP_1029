@@ -1,91 +1,51 @@
-package week31029;
+package demol9;
 
+
+//a class to describe Student objects
+//how should you comment your code?
 public class Student {
-	
-	
-	
-	//instance data - to describe state
-	
-	private int studentID;
+	// instance data - to describe 'state' (each object will have different values)
+	private int studentId;
 	private String name;
 	private String course;
 	private char faculty;
 	
-	
-	
-	//constructor
-	
-	public Student(int id, String nm, String crs, char fac) {
-		
-		this.studentID = id;
-		this.name = nm;
-		this.course = crs;
+	// class data - what's that?
+	static private int nextId = 1;
+
+	// a constructor to initialise 'state'
+	public Student( String sname, String scourse, char fac) {
+		this.studentId = nextId;
+		nextId++;
+		this.name = sname;
+		this.course = scourse;
 		this.faculty = fac;
-		
+	}
+
+	// 'toString' method
+	public String toString() {
+		String result = "";
+		result += "ID: "+getStudentId() + ", ";
+		result += "Name: "+getName() +", ";
+		result += "Course: "+getCourse() + ", ";
+		result += "Faculty: "+getFaculty();
+		return result;
 	}
 	
-	//getters - to access instance data
-	
+	// 'getter' methods
 	public int getStudentId() {
-		
-		return this.studentID;
-	
+		return this.studentId;
 	}
 	
 	public String getName() {
-		
 		return this.name;
-		
 	}
 	
 	public String getCourse() {
-		
 		return this.course;
-		
 	}
 	
 	public char getFaculty() {
-		
 		return this.faculty;
-		
 	}
-	
-	//setters - to modify instance data
-	
-	//don't use static to describe instance methods 
-	
-	public void setFaculty(char fac) {
-		
-		//must maintain integrity of state of objects
-		
-		if(fac == 'S' || fac == 'A') {
-		
-			this.faculty = fac;
-			
-		}
-		
-	}
-	
-	public String toString() {
-		
-		String str = "";
-		
-		str += "ID: " + getStudentId() + "\n";
-		str += "Name: " + getName() + "\n";
-		str += "Course: " + getCourse() + "\n";
-		str += "Faculty: " + getFaculty() + "\n";
-		
-		return str;
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }
