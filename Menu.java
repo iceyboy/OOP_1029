@@ -1,4 +1,4 @@
-package practical3;
+package practical3Employee;
 
 import java.util.Scanner;
 
