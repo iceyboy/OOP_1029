@@ -1,4 +1,4 @@
-package part01;
+package part02;
 
 public class Book {
 	
@@ -75,7 +75,6 @@ public class Book {
 		result += "Summary: " + summary + "\n";
 		result += "Price: £" + priceFormat + "\n";
 		return result;
-	
 		
 	}
 
